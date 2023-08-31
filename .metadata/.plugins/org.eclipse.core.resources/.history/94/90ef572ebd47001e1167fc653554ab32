@@ -1,0 +1,33 @@
+package miroit;
+
+public class Algorithm_Test {
+
+	public int solution(String number) {
+		int answer = 0;
+		
+		String num = number.replaceAll("\\s","");
+		
+		char[] chArr = num.toCharArray();
+		
+		char ch = ' ';
+		
+		for(int i=0; i<chArr.length; i++) {
+
+			ch = chArr[i];
+			
+			answer= answer * 10+(ch-'0');
+		}
+		return answer;
+		
+       
+    }
+
+	public static void main(String[] args) {
+		Algorithm_Test test = new Algorithm_Test();
+		
+		String a = "123456";
+
+		int x = test.solution(a);
+		System.out.println(x);
+	}
+}
